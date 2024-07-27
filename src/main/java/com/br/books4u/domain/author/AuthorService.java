@@ -13,17 +13,17 @@ public class AuthorService {
     @Autowired
     private AuthorRepository authorRepository;
 
-    @Transactional
+    @Transactional(readOnly = true)
     public List<Author> findAll() {
         return authorRepository.findAll();
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public Optional<Author> findById(Long id) {
         return authorRepository.findById(id);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public Optional<List<Author>> findAuthorByNameLike(String name) {
         return authorRepository.findAuthorByNameLike(name);
     }
