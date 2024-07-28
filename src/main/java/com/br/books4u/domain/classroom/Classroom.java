@@ -1,4 +1,4 @@
-package com.br.books4u.domain.calssroom;
+package com.br.books4u.domain.classroom;
 
 import jakarta.persistence.*;
 import jakarta.persistence.Entity;
