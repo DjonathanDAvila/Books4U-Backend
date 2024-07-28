@@ -1,6 +1,6 @@
 package com.br.books4u.domain.student;
 
-import com.br.books4u.domain.calssroom.Classroom;
+import com.br.books4u.domain.classroom.Classroom;
 import jakarta.persistence.*;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
