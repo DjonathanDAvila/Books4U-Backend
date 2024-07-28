@@ -51,7 +51,7 @@ public class Book {
     @JoinColumn(name = "books_localization_id")
     private BookLocalization bookLocalization;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "tb_books_authors",
             joinColumns = @JoinColumn(name = "book_id"),
