@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import java.util.Date;
 
 public record LoanSaveDTO(
+        Long id,
         @NotBlank
         Date startDate,
         @NotBlank
