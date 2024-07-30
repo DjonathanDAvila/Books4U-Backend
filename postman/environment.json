@@ -1,0 +1,15 @@
+{
+	"id": "c19b9c40-0622-430f-8fde-0b11c770bb77",
+	"name": "Books4U",
+	"values": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-07-30T22:39:34.481Z",
+	"_postman_exported_using": "Postman/11.5.1"
+}
