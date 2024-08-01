@@ -41,7 +41,7 @@ public class LoanService {
 
     @Transactional(readOnly = true)
     public List<Loan> findByBookTitle(String bookTitle) {
-        return loanRepository.findByBook_titleContaining(bookTitle);
+        return loanRepository.findByBooks_titleContaining(bookTitle);
     }
 
     @Transactional(readOnly = true)
@@ -55,8 +55,10 @@ public class LoanService {
     }
 
     public Loan save(LoanSaveDTO loanSaveDTO) {
-        Book book = bookRepository.findById(loanSaveDTO.bookId())
-                .orElseThrow(() -> new RuntimeException("Book not found"));
+        List<Book> books = bookRepository.findAllById(loanSaveDTO.booksId());
+        if (books.size() != loanSaveDTO.booksId().size()) {
+            throw new RuntimeException("One or more authors not found");
+        }
 
         Student student = studentRepository.findById(loanSaveDTO.studentId())
                 .orElseThrow(() -> new RuntimeException("Student not found"));
@@ -72,7 +74,7 @@ public class LoanService {
         saveLoan.setEndDate(loanSaveDTO.endDate());
         saveLoan.setDeliveredDate(loanSaveDTO.deliveredDate());
         saveLoan.setTax(loanSaveDTO.tax());
-        saveLoan.setBook(book);
+        saveLoan.setBooks(books);
         saveLoan.setStudent(student);
 
         return loanRepository.save(saveLoan);

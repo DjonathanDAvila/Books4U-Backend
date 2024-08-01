@@ -10,7 +10,7 @@ import java.util.List;
 public interface LoanRepository extends JpaRepository<Loan, Long> {
     List<Loan> findByStudent_fullnameContaining(String userName);
 
-    List<Loan> findByBook_titleContaining(String userName);
+    List<Loan> findByBooks_titleContaining(String userName);
 
     List<Loan> findByStartDateBetween(Date start, Date end);
 

@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,9 +31,13 @@ public class Loan {
     private Date deliveredDate;
     private Double tax;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "book_id")
-    private Book book;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "tb_loan_books",
+            joinColumns = @JoinColumn(name = "loan_id"),
+            inverseJoinColumns = @JoinColumn(name = "book_id")
+    )
+    private List<Book> books;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "student_id")
