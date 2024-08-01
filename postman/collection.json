@@ -4,7 +4,7 @@
 		"name": "crud_books4U",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26376760",
-		"_collection_link": "https://cloudy-capsule-348909.postman.co/workspace/Consult%C3%B3rio~2c5770d3-a77c-4a32-8b61-8dcd1662bd04/collection/26376760-9948b4b6-ed59-4c25-952a-03eb867bfca3?action=share&source=collection_link&creator=26376760"
+		"_collection_link": "https://cloudy-capsule-348909.postman.co/workspace/Consult%25C3%25B3rio~2c5770d3-a77c-4a32-8b61-8dcd1662bd04/collection/26376760-9948b4b6-ed59-4c25-952a-03eb867bfca3?action=share&source=collection_link&creator=26376760"
 	},
 	"item": [
 		{
@@ -72,7 +72,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": null,\r\n    \"name\": \"Apagar irei\"\r\n}",
+							"raw": "{\r\n    \"id\": null,\r\n    \"name\": \"Espirito Santo\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -176,7 +176,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": null,\r\n    \"name\": \"apagar\"\r\n}",
+							"raw": "{\r\n    \"id\": null,\r\n    \"name\": \"Salvação\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -224,13 +224,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/publisher/1",
+							"raw": "{{url}}/publisher/2",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"publisher",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -280,7 +280,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": null,\r\n    \"name\": \"Editora tres\"\r\n}",
+							"raw": "{\r\n    \"id\": null,\r\n    \"name\": \"The chosen\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -372,13 +372,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/bookLocalization/3",
+							"raw": "{{url}}/bookLocalization/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"bookLocalization",
-								"3"
+								""
 							]
 						}
 					},
@@ -391,7 +391,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": null,\r\n    \"bookcase\": \"B\",\r\n    \"shelf\": \"2\"\r\n}",
+							"raw": "{\r\n    \"id\": null,\r\n    \"bookcase\": \"C\",\r\n    \"shelf\": \"1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -606,7 +606,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": null,\r\n    \"fullname\": \"Marcos Aurélio2\",\r\n    \"enrollment\": 919191912291,\r\n    \"active\": 1,\r\n    \"classroomId\": 4\r\n}",
+							"raw": "{\r\n    \"id\": null,\r\n    \"fullname\": \"Marcos Aurélio\",\r\n    \"enrollment\": 919191912291,\r\n    \"active\": 1,\r\n    \"classroomId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -690,14 +690,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/book/title/sobrou",
+							"raw": "{{url}}/book/title/Bí",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"book",
 								"title",
-								"sobrou"
+								"Bí"
 							]
 						}
 					},
@@ -709,14 +709,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/book/genre/sus",
+							"raw": "{{url}}/book/genre/SALV",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"book",
 								"genre",
-								"sus"
+								"SALV"
 							]
 						}
 					},
@@ -748,7 +748,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"E não sobrou nenhum - apagar\",\r\n    \"CDD\": \"123\",\r\n    \"CDU\": \"123\",\r\n    \"CUTER\": \"123\",\r\n    \"active\": 1,\r\n    \"status\": \"ATIVO\",\r\n    \"copy\": 22,\r\n    \"genreId\": 2,\r\n    \"publisherId\": 2,\r\n    \"bookLocalizationId\": 1,\r\n    \"authorsIds\": [1,2]\r\n}",
+							"raw": "{\r\n    \"title\": \"Bíblia Sagrada\",\r\n    \"CDD\": \"1232\",\r\n    \"CDU\": \"1232\",\r\n    \"CUTER\": \"123\",\r\n    \"active\": 1,\r\n    \"status\": \"ATIVO\",\r\n    \"copy\": 2,\r\n    \"genresId\": [2,3],\r\n    \"publisherId\": 2,\r\n    \"bookLocalizationId\": 2,\r\n    \"authorsIds\": [1,2]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -851,14 +851,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/loan/book/qu",
+							"raw": "{{url}}/loan/book/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"loan",
 								"book",
-								"qu"
+								""
 							]
 						}
 					},
@@ -913,7 +913,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": null,\r\n    \"startDate\":\"2023-12-01\",\r\n    \"endDate\": \"2023-12-31\",\r\n    \"deliveredDate\": null,\r\n    \"tax\": 0.52,\r\n    \"bookId\": 1,\r\n    \"studentId\": 1\r\n}",
+							"raw": "{\r\n    \"id\": null,\r\n    \"startDate\":\"2023-12-01\",\r\n    \"endDate\": \"2023-12-31\",\r\n    \"deliveredDate\": null,\r\n    \"tax\": 0.52,\r\n    \"booksId\": [1,2],\r\n    \"studentId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

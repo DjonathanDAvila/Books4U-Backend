@@ -39,9 +39,14 @@ public class Book {
     @Column(nullable = false)
     private Integer copy;
 
-    @ManyToOne
-    @JoinColumn(name = "genre_id")
-    private Genre genre;
+    @ManyToMany(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "genre_id")
+    @JoinTable(
+            name = "tb_books_genres",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "genre_id")
+    )
+    private List<Genre> genres;
 
     @ManyToOne
     @JoinColumn(name = "publisher_id")

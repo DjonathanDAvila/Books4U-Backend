@@ -14,7 +14,7 @@ public record BookSaveDTO(
         @NotBlank
         String status,
         Integer copy,
-        Long genreId,
+        List<Long> genresId,
         Long publisherId,
         Long bookLocalizationId,
         List<Long> authorsIds

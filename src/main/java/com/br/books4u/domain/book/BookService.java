@@ -55,12 +55,14 @@ public class BookService {
 
     @Transactional(readOnly = true)
     public List<Book> findByGenre_NameContaining(String genreName) {
-        return bookRepository.findByGenre_NameContaining(genreName);
+        return bookRepository.findByGenres_NameContaining(genreName);
     }
 
     public Book save(BookSaveDTO bookSaveDTO) {
-        Genre genre = genreRepository.findById(bookSaveDTO.genreId())
-                .orElseThrow(() -> new RuntimeException("Genre not found"));
+        List<Genre> genres = genreRepository.findAllById(bookSaveDTO.genresId());
+        if (genres.size() != bookSaveDTO.genresId().size()) {
+            throw new RuntimeException("Genres and genres do not match");
+        }
 
         Publisher publisher = publisherRepository.findById(bookSaveDTO.publisherId())
                 .orElseThrow(() -> new RuntimeException("Publisher not found"));
@@ -81,7 +83,7 @@ public class BookService {
         book.setActive(bookSaveDTO.active());
         book.setStatus(bookSaveDTO.status());
         book.setCopy(bookSaveDTO.copy());
-        book.setGenre(genre);
+        book.setGenres(genres);
         book.setPublisher(publisher);
         book.setBookLocalization(bookLocalization);
         book.setAuthors(authors);
@@ -89,7 +91,7 @@ public class BookService {
         return bookRepository.save(book);
     }
 
-    public void delteBookById(Long id){
+    public void delteBookById(Long id) {
         bookRepository.deleteById(id);
     }
 }
