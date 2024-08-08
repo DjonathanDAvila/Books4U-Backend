@@ -16,7 +16,7 @@ O sistema permitirá o controle de cadastro, empréstimos, devoluções e reserv
 
 ## Repositório Front-End
 
-- [GlicoCare Front-End](https://github.com/CairoDeAndrade/Books4U-Frontend)
+- [Front-End](https://github.com/CairoDeAndrade/Books4U-Frontend)
 
 ---
 
