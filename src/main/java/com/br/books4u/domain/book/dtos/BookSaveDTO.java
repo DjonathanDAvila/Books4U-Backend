@@ -17,6 +17,7 @@ public record BookSaveDTO(
         List<Long> genresId,
         Long publisherId,
         Long bookLocalizationId,
-        List<Long> authorsIds
+        List<Long> authorsIds,
+        Integer publication_year
 ) {
 }

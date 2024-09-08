@@ -87,6 +87,7 @@ public class BookService {
         book.setPublisher(publisher);
         book.setBookLocalization(bookLocalization);
         book.setAuthors(authors);
+        book.setPublication_year(bookSaveDTO.publication_year());
 
         return bookRepository.save(book);
     }
